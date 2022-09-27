@@ -1,0 +1,16 @@
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\bin\Debug\LibrosWPF.exe.config
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\bin\Debug\LibrosWPF.exe
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\bin\Debug\LibrosWPF.pdb
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF.csproj.AssemblyReference.cache
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF.csproj.SuggestedBindingRedirects.cache
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\MainWindow.g.cs
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\App.g.cs
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF_MarkupCompile.cache
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF_MarkupCompile.lref
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\MainWindow.baml
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF.g.resources
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF.Properties.Resources.resources
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF.csproj.GenerateResource.cache
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF.csproj.CoreCompileInputs.cache
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF.exe
+C:\Users\nsampini\source\repos\LibrosWPF\LibrosWPF\obj\Debug\LibrosWPF.pdb

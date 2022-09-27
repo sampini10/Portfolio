@@ -1,0 +1,33 @@
+﻿<Window x:Name="App" x:Class="LibrosWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibrosWPF"
+        mc:Ignorable="d"
+        Title="App Libros" Height="450" Width="800" HorizontalAlignment="Center" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="397*" />
+            <ColumnDefinition Width="403*" />
+        </Grid.ColumnDefinitions>
+        <Label>Libros</Label>
+        <ListBox Grid.Row="1" x:Name="lstRegistro" />
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <Label Width="180" Height="25">Ingrese ISBN</Label>
+            <TextBox x:Name="txtIsbn" Height="20" Width="170" Margin="5" AutomationProperties.IsRequiredForForm="True"/>
+            <Label Width="180" Height="25" Margin="5">Ingrese Titulo</Label>
+            <TextBox x:Name="txtTitulo" Height="20" Width="170" Margin="5" AutomationProperties.IsRequiredForForm="True" />
+            <Label Width="180" Height="25">Ingrese Autor</Label>
+            <TextBox x:Name="txtAutor" Height="20" Width="170" Margin="5" AutomationProperties.IsRequiredForForm="True"/>
+            <Label Width="180" Height="25">Ingrese numero de Paginas</Label>
+            <TextBox x:Name="txtPages" Height="20" Width="170" Margin="5" AutomationProperties.IsRequiredForForm="True" />
+            <Button x:Name="btnAdd" Width="166" Content="Registrar" Margin="30" Click="btnAdd_Click"/>
+            <Button x:Name="btnClear" Width="166" Content="Limpiar Registro" Margin="30" Click="btnClear_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
