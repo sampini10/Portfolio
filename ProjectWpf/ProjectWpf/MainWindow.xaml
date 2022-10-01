@@ -1,0 +1,74 @@
+﻿<Window x:Class="ProjectWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectWpf"
+        mc:Ignorable="d"
+        Title="TurnoClick 1.0" Height="550" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Img/LogoBack.png" ResizeMode="NoResize" WindowStyle="None">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Img/backGround.jpg" Stretch="UniformToFill"></ImageBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="79*" />
+            <ColumnDefinition Width="153*" />
+            <ColumnDefinition Width="268*" />
+        </Grid.ColumnDefinitions>
+        <Label Margin="0,0,14,365" FontFamily="Segoe UI Semibold" FontSize="16" Foreground="#3A3B3C">Gestion de Turnos</Label>
+        <Grid Grid.Column="0" Margin="0,0,14,0">
+            <Button Style="{DynamicResource RoundedButton}" Width="100" Height="30" Background="#7aa9a7" HorizontalAlignment="Center" Margin="0,64,0,456" Foreground="#000000" Click="Button_EnabledTurno">Crear Turno</Button>
+            <Button Style="{DynamicResource RoundedButton}" Width="100" Height="30"  Background="#7aa9a7" HorizontalAlignment="Center" Margin="0,113,0,407" Foreground="#000000" Click="Button_UpdateTurno">Modificar Turno</Button>
+            <Button Style="{DynamicResource RoundedButton}" Width="100" Height="30" Background="#7aa9a7" HorizontalAlignment="Center" Margin="0,161,0,359" Foreground="#000000" Click="Button_Delete">Borrar Turno</Button>
+        </Grid>
+        <Label Margin="10,445,148,72" Grid.Column="1" FontSize="16" Foreground="#3A3B3C">Buscador de turno</Label>
+        <Image Source="/Img/search.png" Margin="1,478,264,48" Grid.Column="1"/>
+        <TextBox x:Name="txtSearch" Margin="38,478,98,43" Grid.Column="1" Background="#CFD8DC" TextChanged="TextBox_TextChanged"></TextBox>
+        <Label Grid.Column="2" Content="Lista de Turnos" FontFamily="Segoe UI Semibold" FontSize="18" Margin="0,36,50,10" Foreground="#3A3B3C"/>
+        <DataGrid x:Name="listTurnos" IsReadOnly="True" AutoGenerateColumns="False" Grid.Column="2" Margin="0,67,39,57">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding APELLIDO}" Header="Apellido" Width="*"/>
+                <DataGridTextColumn Binding="{Binding NOMBRE}" Width="*" Header="Nombre"/>
+                <DataGridTextColumn Binding="{Binding FECHA, StringFormat='dd-MMM-yyyy'}" Width="*" Header="Fecha de Turno"/>
+                <DataGridTextColumn Binding="{Binding HORA}" Width="*" Header="Horario de Turno"/>
+                <DataGridTextColumn Binding="{Binding ESPECIALIDAD}" Width="*" Header="Especialista"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel x:Name="panelTurno" Grid.Column="1" Margin="17,36,98,90" IsEnabled="false" Opacity="0.3">
+            <Label FontWeight="Bold" Content="PACIENTE:" Foreground="#3A3B3C"/>
+            <Label Foreground="#3A3B3C">Nombre</Label>
+            <TextBox x:Name="txtName" Height="20" Width="183" HorizontalAlignment="Left" AutomationProperties.IsRequiredForForm="True" Background="#CFD8DC" />
+            <Label Foreground="#3A3B3C">Apellido</Label>
+            <TextBox x:Name="txtSurname" Height="20" Width="183"  AutomationProperties.IsRequiredForForm="True" HorizontalAlignment="Left" Background="#CFD8DC" />
+            <Label Foreground="#3A3B3C">Obra Social</Label>
+            <ComboBox x:Name="cmbOSocial" Height="20" Width="183" AutomationProperties.IsRequiredForForm="True" HorizontalAlignment="Left" Background="#CFD8DC" >
+                <ComboBoxItem Content="OSDE"/>
+                <ComboBoxItem Content="SwissMedical"/>
+                <ComboBoxItem Content="Galeno"/>
+            </ComboBox>
+            <Label Foreground="#3A3B3C">Especialista:</Label>
+            <ComboBox x:Name="cmbEspecialista" Background="#CFD8DC" Width="183" HorizontalAlignment="left"/>
+            <Label Foreground="#3A3B3C">Fecha:</Label>
+            <DatePicker x:Name="fecha" Width="187" HorizontalAlignment="Left" Background="#3A3B3C" SelectedDateFormat="Short"></DatePicker>
+            <Label Foreground="#3A3B3C">Hora:</Label>
+            <ComboBox x:Name="cmbHora" Height="20" Width="170" AutomationProperties.IsRequiredForForm="True" HorizontalAlignment="Left" Background="#CFD8DC" >
+                <ComboBoxItem Content="12:00"/>
+                <ComboBoxItem Content="13:00"/>
+                <ComboBoxItem Content="14:00"/>
+                <ComboBoxItem Content="15:00"/>
+            </ComboBox>
+            <Label FontSize="10">*Los datos deben estar completos</Label>
+            <Label></Label>
+            <Button Style="{DynamicResource RoundedButton}" Width="100" Height="30" Background="#7aa9a7" Foreground="#FFFFFF" Content="Agregar Turno" Click="Button_AddTurno"/>
+        </StackPanel>
+        <Button Style="{DynamicResource RoundedButton}" Grid.Column="2" HorizontalAlignment="Left" Height="35" Margin="425,5,0,0" VerticalAlignment="Top" Width="27" Background="Transparent" BorderBrush="Transparent" Click="Button_MinimizeWindow">
+            <Image Source="/Img/minimize.png"/>
+        </Button>
+        <Button Style="{DynamicResource RoundedButton}" Grid.Column="2" HorizontalAlignment="Left" Height="34" Margin="470,5,0,0" VerticalAlignment="Top" Width="27" Background="Transparent" BorderBrush="Transparent" Click="Button_CloseWindow">
+            <Image Source="/Img/powerOff.png"/>
+        </Button>
+    </Grid>
+</Window>

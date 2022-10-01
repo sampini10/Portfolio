@@ -1,0 +1,40 @@
+﻿<Window x:Class="ProjectWpf.Update"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectWpf"
+        mc:Ignorable="d"
+        Title="Update" Height="438" Width="271"
+        WindowStartupLocation="CenterScreen" Icon="/Img/LogoBack.png" ResizeMode="NoResize" WindowStyle="None"
+        Background="#7aa9a7">
+    <StackPanel x:Name="panelTurno" HorizontalAlignment="Center" Margin="0,0,0,10">
+        <Label FontWeight="Bold" Content="PACIENTE:" Foreground="#3A3B3C" Height="25"/>
+        <Label Foreground="#3A3B3C" Content="Nombre"/>
+        <TextBox x:Name="txtName" Height="20" Width="183" HorizontalAlignment="Left" AutomationProperties.IsRequiredForForm="True" Background="#CFD8DC" />
+        <Label Foreground="#3A3B3C" Content="Apellido"/>
+        <TextBox x:Name="txtSurname" Height="20" Width="183"  AutomationProperties.IsRequiredForForm="True" HorizontalAlignment="Left" Background="#CFD8DC" />
+        <Label Foreground="#3A3B3C" Content="Obra Social"/>
+        <ComboBox x:Name="cmbOSocial" Height="20" Width="183" AutomationProperties.IsRequiredForForm="True" HorizontalAlignment="Left" Background="#CFD8DC" >
+            <ComboBoxItem Content="OSDE"/>
+            <ComboBoxItem Content="SwissMedical"/>
+            <ComboBoxItem Content="Galeno"/>
+        </ComboBox>
+        <Label Foreground="#3A3B3C" Content="Especialista:"/>
+        <ComboBox x:Name="cmbEspecialista" Background="#CFD8DC" Width="183" HorizontalAlignment="left"/>
+        <Label Foreground="#3A3B3C" Content="Fecha:"/>
+        <DatePicker x:Name="fecha" Width="187" HorizontalAlignment="Left" Background="#3A3B3C" SelectedDateFormat="Short"/>
+        <Label Foreground="#3A3B3C" Content="Hora:"/>
+        <ComboBox x:Name="cmbHora" Height="20" Width="170" AutomationProperties.IsRequiredForForm="True" HorizontalAlignment="Left" Background="#CFD8DC" >
+            <ComboBoxItem Content="12:00"/>
+            <ComboBoxItem Content="13:00"/>
+            <ComboBoxItem Content="14:00"/>
+            <ComboBoxItem Content="15:00"/>
+        </ComboBox>
+        <Label FontSize="10" Content="*Los datos deben estar completos"/>
+        <Label/>
+        <Button Style="{DynamicResource RoundedButton}" Width="100" Height="30" Background="#aadbd8" Foreground="#3A3B3C" Content="Modificar Turno" Click="Button_UpdateTurno"/>
+        <Rectangle Height="10"></Rectangle>
+        <Button Style="{DynamicResource RoundedButton}" Width="100" Height="30" Background="#aadbd8" Foreground="#3A3B3C" Content="Cancelar" Click="Button_CloseWindow" />
+    </StackPanel>
+</Window>
